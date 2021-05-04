@@ -21,7 +21,7 @@ RUN Invoke-WebRequest -Uri $env:download_url -OutFile DacFramework.msi ; `
 FROM microsoft/mssql-server-windows-express:2016-sp1
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
 
-COPY --from=sqlpackage ["C:\\Program Files\\Microsoft SQL Server\\140\\DAC", "C:\\Program Files\\Microsoft SQL Server\\140\\DAC"]
+COPY --from=sqlpackage ["C:\\Program Files\\Microsoft SQL Server\\130\\DAC", "C:\\Program Files\\Microsoft SQL Server\\130\\DAC"]
 
 ENV ACCEPT_EULA="Y" `
     DATA_PATH="C:\database" `

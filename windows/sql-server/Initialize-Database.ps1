@@ -38,7 +38,7 @@ if ($TargetDatabaseName -eq '.\SQLEXPRESS') {
 }
 
 # deploy or upgrade the database:
-$SqlPackagePath = 'C:\Program Files\Microsoft SQL Server\140\DAC\bin\SqlPackage.exe'
+$SqlPackagePath = 'C:\Program Files\Microsoft SQL Server\130\DAC\bin\SqlPackage.exe'
 & $SqlPackagePath  `
     /sf:Assets.Database.dacpac `
     /a:Script /op:deploy.sql /p:CommentOutSetVarDeclarations=true `
